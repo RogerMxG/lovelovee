@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knew you would say yes!</title>
+    <title>Yippie Yippie</title>
     <link rel="stylesheet" href="./yes_style.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./src/assets/css/animations.css">
+    
 </head>
 <body>
+    <div class="hearts"></div>
     <div class="container">
-        <h1 class="header_text">Knew you would say yes!</h1>
+        <h1 class="header_text">Niceee! I'll give u a lot of 💋 and hugs</h1>
         <div class="gif_container">
             <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
         </div>
     </div>
+
+    <div class="buttons">
+        <button class="continue-button" onclick="handleContinueClick()">🎁</button>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "💋";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.querySelector(".hearts").appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
