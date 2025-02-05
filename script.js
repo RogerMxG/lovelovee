@@ -29,3 +29,18 @@ function handleYesClick() {
 function handleContinueClick() {
     window.location.href = "carrussel.html";
 }
+
+window.onload = function () {
+    var audio = document.getElementById("background-audio");
+    var promise = audio.play();
+
+    if (promise !== undefined) {
+        promise.catch(function (error) {
+            // Autoplay no permitido
+            alert("Haz clic en la página para reproducir la música.");
+            document.addEventListener('click', function () {
+                audio.play();
+            });
+        });
+    }
+};

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Please Please</title>
     <link rel="stylesheet" href="./src/assets/css/styles.css">
+    <link rel="stylesheet" href="./yes_style.css">
     <style>
         body {
             overflow: hidden;
@@ -63,7 +64,7 @@
                 </div>
                 <div class="slide">
                     <img src="./src/assets/img/6.jpg" alt="Imagen 3">
-                    <div class="message-box">Eres mi persona favorita. 🤏🏼👩‍🦰</div>
+                    <div class="message-box">Eres mi persona favorita. 🫵👩🏽</div>
                 </div>
                 <div class="slide">
                     <img src="./src/assets/img/7.jpg" alt="Imagen 3">
@@ -79,7 +80,7 @@
                 </div>
                 <div class="slide">
                     <img src="./src/assets/img/10.jpg" alt="Imagen 3">
-                    <div class="message-box">Te elijo hoy, mañana y siempre. 🤏🏼</div>
+                    <div class="message-box">Te elijo hoy, mañana y siempre. 🫵</div>
                 </div>
                 <div class="slide">
                     <img src="./src/assets/img/11.jpg" alt="Imagen 3">
@@ -91,48 +92,15 @@
             <button id="prev">&#10094;</button>
             <button id="next">&#10095;</button>
         </div>
-        <!--<div class="gif_container2">
-            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHpsaTFicG1tOGJ4dDE4YWt5eWI1cHRpaWo5MzRzNnJpYnMwd3NybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IEm8kcqLVCctHJ1kWm/giphy.gif">
-            <div class="message-box2"></div>
-        </div>-->
     </div>
-    
 
     <audio id="background-audio" loop>
         <source src="./src/assets/music/sd.mp3" type="audio/mpeg">
     </audio>
 
-    <script>
-        window.onload = function() {
-            var audio = document.getElementById("background-audio");
-            var promise = audio.play();
-
-            if (promise !== undefined) {
-                promise.catch(function(error) {
-                    // Autoplay no permitido
-                    alert("Haz clic en la página para reproducir la música.");
-                    document.addEventListener('click', function() {
-                        audio.play();
-                    });
-                });
-            }
-        };
-    </script>
-
-
-    <script>
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.innerHTML = "❤️";
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-            document.querySelector(".hearts").appendChild(heart);
-            setTimeout(() => heart.remove(), 4000);
-        }
-        setInterval(createHeart, 500);
-    </script>
     <script src="./src/assets/js/index.js"></script>
     
 </body>
 </html>
+
+

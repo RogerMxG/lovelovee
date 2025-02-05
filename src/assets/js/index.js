@@ -17,3 +17,29 @@ function updateCarousel() {
     carousel.style.transform = `translateX(-${index * 100}%)`;
 }
 
+window.onload = function () {
+    var audio = document.getElementById("background-audio");
+    var promise = audio.play();
+
+    if (promise !== undefined) {
+        promise.catch(function (error) {
+            // Autoplay no permitido
+            alert("Haz clic en la página para reproducir la música.");
+            document.addEventListener('click', function () {
+                audio.play();
+            });
+        });
+    }
+};
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+    document.querySelector(".hearts").appendChild(heart);
+    setTimeout(() => heart.remove(), 4000);
+}
+setInterval(createHeart, 500);
+
