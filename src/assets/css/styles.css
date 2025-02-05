@@ -51,17 +51,8 @@ img {
 .message-box {
     position: absolute;
     bottom: 100px;
-    width: 100%;
+    width: 99%;
     text-align: center;
-    font-family:sans-serif;
-    font-size: large;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-}
-.message-box2 {
-    position: absolute;
     font-family:sans-serif;
     font-size: large;
     background: rgba(0, 0, 0, 0.5);
